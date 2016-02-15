@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=9">
+
+<html>
+    <head>
+        <title>Restaurante</title>
+        <link rel="stylesheet" type="text/css" href="_css/mystyle.css">
+    </head>
+    
+    <body id="main">
+        
+    <div class="topimg">
+        <img src="_img/avatar.jpg" width="100%" height="33%">
+    </div>    
+        
+    
+    <div id="wrapper">
+    </div>    
+    
+    <div id="header">
+        <div class="navbar">
+         <ul>
+            <li><a class="active">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a href="fotos.html">Fotos</a></li>
+        </ul>
+        </div>    
+    </div>
+        
+        </br>
+        
+    <h1 id="title">La Beladonna </h1>
+        
+    <div>                   
+     <div><p class="about"> Quer passar uma boa noite com os seus amigos? Porque não vir ao restaurante La Beladonna? Com o seu smartphone pode descobrir como cá chegar, pode ver o nosso menu e garantimos que vai ter uma refeição inesquecível!</p></div>
+    </div>   
+    
+    <div>
+    <hr id="linha">
+    </div>
+
+        <div class="section">
+        <p>O menu dá água na boca e as fotografias dos pratos aguçam a curiosidade: são uma sucessão de receitas sofisticadas e criativas, confecionadas pela nossa chef, que despertam o paladar e transformam o acto de comer num enorme prazer.
+        </br>  
+        O restaurante La Belladonna propõe, mais do que simples pratos saudáveis, apresentar verdadeiras iguarias que pela mistura de ingredientes, cores e sabores, possuem um profundo carisma, alcançando quase o estatuto de obras de arte.</p>
+    </div>
+
+    
+    <div class="galleria2" style="position: relative; height: 500;">
+            <a href="_img/img6.jpg" style="position: absolute; left: 0px; top: 0px;"></a>
+                <img id="img6" src="_img/img6.jpg" alt="foto6">
+            <a href="_img/img4.jpg" style="position: absolute; left: 250px; top: 0px;"></a>
+                <img src="_img/img4.jpg" alt="foto4">
+            <a href="_img/img3.jpg" style="position: absolute; left: 0px; top: 250px;"></a>
+                <img id="img3" src="_img/img3.jpg" alt="foto3">
+            <a href="_img/img8.jpg" style="position: absolute; left: 250px; top: 250px;"></a>
+                <img src="_img/img8.jpg" alt="foto8">
+    </div>
+    
+        <div>
+            <hr id="linha">
+        </div>
+    
+        <div  class="info">
+            <p>HORÁRIOS</br>
+            Almoco: 12:30h - 15h </br>
+            Jantar de Segunda a Quinta: 20h - 22:30h </br>
+            Jantar de Quinta e Sábado: 20h - 24h </br>
+            Encerrado ao Domingo e Feriados</br></p>
+        </div>
+        
+         <div class="info">
+             <p>
+                INFORMAÇÕES E RESERVAS</br>
+                Telefone: +351 123456789 / +351 987654321</br>
+                email@email.com </br>
+                Servico Best Tables </br>
+                O restaurante tem opções vegetarianas</br>
+             </p>
+        </div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<!-- Esta parte nao percebo muito bem mas queria meter isto no site-->        
+        
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var i;
+for (i = 0; i < images.length; i++) {
+   images[i].onclick = function(){
+       modal.style.display = "block";
+       modalImg.src = this.src;
+       modalImg.alt = this.alt;
+       captionText.innerHTML = this.nextElementSibling.innerHTML;
+   }
+}
+</script>
+
+    <div id="footer">
+        <div class="network">
+            <p id="follow">Follow us</p>
+            <div class="social"> <a href="https://www.facebook.com/" target="_blank"><img src="_img/facebook.png" alt="face" width="50px" height="50px">
+        </a></div>
+    <div class="social"> <a href="https://twitter.com/" target="_blank"><img src="_img/twitter.png" alt="twit" width="50px" height="50px">
+        </a></div>
+    <div class="social"> <a href="https://www.instagram.com/" target="_blank"><img src="_img/instagram.png" alt="isnta" width="50px" height="50px">
+        </a></div>
+        </div>
+        <p>Rua sobe e desce 1111, 4444-333 PORTO | Email@email.com | +351 123456789 / +351 987654321</p>
+
+        <p>2015 - 2015 - TODOS OS DIREITOS RESERVADOS - DESENVOLVIDO POR: Daniel Bessa</p>
+        </br>
+    </div>
+
+    </body>
+</html>

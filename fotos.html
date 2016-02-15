@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="IE=9">
+
+<html>
+    <head>
+        <title>Fotos</title>
+        <link rel="stylesheet" type="text/css" href="_css/mystyle.css">
+    </head>
+
+    <body id="main">
+        
+    <div class="topimg">
+        <img src="_img/avatar.jpg" width="100%" height="33%">
+    </div>    
+        
+        
+    <div id="header">    
+        <div class="navbar">
+         <ul>
+            <li><a href="main.html" href="#home">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="contact.html">Contacto</a></li>
+            <li><a class="active">Fotos</a></li>
+        </ul>
+        </div>
+    </div>
+        </br>
+        
+    <h1 id="title">Fotos </h1>
+        
+        
+        <div class="galleria" style="position: relative; height: 1950;">
+            <!-- 1 row -->
+            <a href="_img/img1.jpg" style="position: absolute; left: 0px; top: 0px;"></a>
+                <img id="img1" src="_img/img1.jpg" alt="image1">
+            <a href="_img/img2.jpg" style="position: absolute; left: 390px; top: 0px;"></a>
+                <img src="_img/img2.jpg" alt="image2">
+            <a href="_img/img3.jpg" style="position: absolute; left: 780px; top: 0px;"></a>
+                <img src="_img/img3.jpg" alt="image3">
+            
+            <!-- 2 row -->
+            <a href="_img/img4.jpg" style="position: absolute; left: 0px; top: 390px;"></a>
+                <img src="_img/img4.jpg" alt="image4">
+            <a href="_img/img5.jpg" style="position: absolute; left: 390px; top: 390px;"></a>
+                <img src="_img/img5.jpg" alt="image5">
+            <a href="_img/img6.jpg" style="position: absolute; left: 780px; top: 390px;"></a>
+                <img src="_img/img6.jpg" alt="image6">
+            
+            <!-- 3 row -->
+            <a href="_img/img7.jpg" style="position: absolute; left: 0px; top: 780px;"></a>
+                <img src="_img/img7.jpg" alt="image7">
+            <a href="_img/img8.jpg" style="position: absolute; left: 390px; top: 780px;"></a>
+                <img src="_img/img8.jpg" alt="image8">
+            <a href="_img/img9.jpg" style="position: absolute; left: 780px; top: 780px;"></a>
+                <img src="_img/img9.jpg" alt="image9">
+            
+            <!-- 4 row -->
+            <a href="_img/img10.jpg" style="position: absolute; left: 0px; top: 1170px;"></a>
+                <img src="_img/img10.jpg" alt="image10">
+            <a href="_img/img11.jpg" style="position: absolute; left: 390px; top: 1170px;"></a>
+                <img src="_img/img11.jpg" alt="image11">
+            <a href="_img/img12.jpg" style="position: absolute; left: 780px; top: 1170px;"></a>
+                <img src="_img/img12.jpg" alt="image12">
+            
+            <!-- 5 row -->
+            <a href="_img/img13.jpg" style="position: absolute; left: 0px; top: 1590px;"></a>
+                <img src="_img/img13.jpg" alt="image13">
+            <a href="_img/img14.jpg" style="position: absolute; left: 390px; top: 1590px;"></a>
+                <img src="_img/img14.jpg" alt="image14">
+            <a href="_img/img15.jpg" style="position: absolute; left: 780px; top: 1590px;"></a>
+                <img src="_img/img15.jpg" alt="image15">
+            
+            <!-- Hover Icon <div class="play"><img src="_img/magnify.png"/> </div> -->
+        </div>
+        
+                
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">×</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<!-- Esta parte nao percebo muito bem mas queria meter isto no site-->        
+        
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+
+// Get all images and insert the clicked image inside the modal
+// Get the content of the image description and insert it inside the modal image caption
+var images = document.getElementsByTagName('img');
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+var i;
+for (i = 0; i < images.length; i++) {
+   images[i].onclick = function(){
+       modal.style.display = "block";
+       modalImg.src = this.src;
+       modalImg.alt = this.alt;
+       captionText.innerHTML = this.nextElementSibling.innerHTML;
+   }
+}
+</script>
+        
+        
+    <!-- Fim da Galleria de Fotos -->    
+        
+        
+    <div id="footer">
+        <div class="network">
+            <p id="follow">Follow us</p>
+            <div class="social"> <a href="https://www.facebook.com/" target="_blank"><img src="_img/facebook.png" alt="face" width="50px" height="50px">
+        </a></div>
+    <div class="social"> <a href="https://twitter.com/" target="_blank"><img src="_img/twitter.png" alt="twit" width="50px" height="50px">
+        </a></div>
+    <div class="social"> <a href="https://www.instagram.com/" target="_blank"><img src="_img/instagram.png" alt="isnta" width="50px" height="50px">
+        </a></div>
+        </div>
+        <p>Rua sobe e desce 1111, 4444-333 PORTO | Email@email.com | +351 123456789 / +351 987654321</p>
+
+        <p>2015 - 2015 - TODOS OS DIREITOS RESERVADOS - DESENVOLVIDO POR: Daniel Bessa</p>
+        </br>
+    </div>
+        
+    </body>
+</html>
