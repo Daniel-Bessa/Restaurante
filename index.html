@@ -5,65 +5,115 @@
 <html>
     <head>
         <title>Restaurante</title>
-        <link rel="stylesheet" type="text/css" href="_css/mystyle.css">
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <script src=”//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js”></script>
+        <script src="http://maps.googleapis.com/maps/api/js"></script>
+        <link rel=”stylesheet” id=”font-awesome-css” href=”//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css” type=”text/css” media=”screen”>
+
+        
+        <script>
+            function initialize() {
+                var mapProp = {
+                center:new google.maps.LatLng(41.1573962,-8.6294733),
+                zoom:17,
+                mapTypeId:google.maps.MapTypeId.ROADMAP
+                };
+                    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+            }
+                    google.maps.event.addDomListener(window, 'load', initialize);
+        </script>
+        
+ <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+ <script>
+   $(document).ready(function () {
+       $(window).scroll(function () {
+           if ($(this).scrollTop() > 100) {
+               $('.scrollup').fadeIn();
+           } else {
+               $('.scrollup').fadeOut();
+           }
+       });
+       $('.scrollup').click(function () {
+           $("html, body").animate({
+               scrollTop: 0
+           }, 600);
+           return false;
+       });
+   });
+ </script>
     </head>
     
-    <body id="main">
+    <body>
+                
+<!-- The Modal -->
+
+        <div id="myModal" class="modal">
+            <span class="close">×</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+<!-- Modal ends -->
         
     <div class="topimg">
-        <img src="_img/avatar.jpg" width="100%" height="33%">
+        <img src="img/avatar.jpg" width="100%" height="33%">
     </div>    
         
-    
-    <div id="wrapper">
-    </div>    
-    
+        
     <div id="header">
-        <div class="navbar">
+        <div class="topbar">
          <ul>
-            <li><a class="active">Home</a></li>
-            <li><a href="menu.html">Menu</a></li>
-            <li><a href="contact.html">Contacto</a></li>
-            <li><a href="fotos.html">Fotos</a></li>
+            <li><a href="#break">Horario</a></li>
+            <li><a href="#break2">Menu</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#gallery">Fotos</a></li>
         </ul>
         </div>    
     </div>
         
         </br>
-        
-    <h1 id="title">La Beladonna </h1>
+<!-- ------------------------------------------------------------------ -->    
+    
+<!-- Introducao Begins -->    
+     
+    <div id="main">
+      
+    <h1>La Beladonna </h1>
         
     <div>                   
-     <div><p class="about"> Quer passar uma boa noite com os seus amigos? Porque não vir ao restaurante La Beladonna? Com o seu smartphone pode descobrir como cá chegar, pode ver o nosso menu e garantimos que vai ter uma refeição inesquecível!</p></div>
+     <div><p class="intro"> Quer passar uma boa noite com os seus amigos? Porque não vir ao restaurante La Beladonna? Com o seu smartphone pode descobrir como cá chegar, pode ver o nosso menu e garantimos que vai ter uma refeição inesquecível!</p></div>
     </div>   
     
     <div>
     <hr id="linha">
     </div>
 
-        <div class="section">
-        <p>O menu dá água na boca e as fotografias dos pratos aguçam a curiosidade: são uma sucessão de receitas sofisticadas e criativas, confecionadas pela nossa chef, que despertam o paladar e transformam o acto de comer num enorme prazer.
+    <div class="section">
+        <p>O menu dá água na boca e as fotografias dos pratos aguçam a curiosidade: são uma sucessão de receitas            sofisticadas e criativas, confecionadas pela nossa chef, que despertam o paladar e transformam o acto            de comer num enorme prazer.
         </br>  
-        O restaurante La Belladonna propõe, mais do que simples pratos saudáveis, apresentar verdadeiras iguarias que pela mistura de ingredientes, cores e sabores, possuem um profundo carisma, alcançando quase o estatuto de obras de arte.</p>
+        O restaurante La Belladonna propõe, mais do que simples pratos saudáveis, apresentar verdadeiras iguarias         que pela mistura de ingredientes, cores e sabores, possuem um profundo carisma, alcançando quase o               estatuto de obras de arte.</p>
     </div>
 
     
-    <div class="galleria2" style="position: relative; height: 500;">
-            <a href="_img/img6.jpg" style="position: absolute; left: 0px; top: 0px;"></a>
-                <img id="img6" src="_img/img6.jpg" alt="foto6">
-            <a href="_img/img4.jpg" style="position: absolute; left: 250px; top: 0px;"></a>
-                <img src="_img/img4.jpg" alt="foto4">
-            <a href="_img/img3.jpg" style="position: absolute; left: 0px; top: 250px;"></a>
-                <img id="img3" src="_img/img3.jpg" alt="foto3">
-            <a href="_img/img8.jpg" style="position: absolute; left: 250px; top: 250px;"></a>
-                <img src="_img/img8.jpg" alt="foto8">
+    <div class="galeria" style="position: relative; height: 500;">
+        
+            <a href="img/img6.jpg" style="position: absolute; left: 0px; top: 0px;"></a>
+                <img class="foto" id="img6" src="img/img6.jpg" alt="foto6">
+            <a href="img/img4.jpg" style="position: absolute; left: 250px; top: 0px;"></a>
+                <img class="foto" src="img/img4.jpg" alt="foto4">
+            <a href="img/img3.jpg" style="position: absolute; left: 0px; top: 250px;"></a>
+                <img class="foto" id="img3" src="img/img3.jpg" alt="foto3">
+            <a href="img/img8.jpg" style="position: absolute; left: 250px; top: 250px;"></a>
+                <img class="foto" src="img/img8.jpg" alt="foto8">
+        
+        <div id="break"></div>
     </div>
-    
-        <div>
-            <hr id="linha">
-        </div>
-    
-        <div  class="info">
+            
+            <div>
+                <hr id="linha">
+            </div>        
+
+        <div class="info" id="schedule">            
             <p>HORÁRIOS</br>
             Almoco: 12:30h - 15h </br>
             Jantar de Segunda a Quinta: 20h - 22:30h </br>
@@ -81,16 +131,152 @@
              </p>
         </div>
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <span class="close">×</span>
-  <img class="modal-content" id="img01">
-  <div id="caption"></div>
+    </div>
+
+<!-- ------------------------------------------------------------------ -->
+
+<!-- Menu Begins -->
+
+    <hr id="linha">
+    
+    <div id="break2"></div>
+
+    <div id="menu">
+        
+        <div id="bground">
+            
+        </div>
+        
+        <div id="imgground">
+            <img align="middle" src="img/modelomenu.jpg" width="50%" height="100%">
+        </div>
+    </div>
+        
+<!-- ------------------------------------------------------------------ -->
+
+<!-- Contact Begins -->
+
+<div id="contacto">
+
+<hr id="linha">
+
+            <h2>Localização </h2>
+        
+        
+            <div class="cont">
+                <p>HORÁRIOS</br>
+                Almoco: 12:30h - 15h </br>
+                Jantar de Segunda a Quinta: 20h - 22:30h </br>
+                Jantar de Quinta e Sábado: 20h - 24h </br>
+                Encerrado ao Domingo e Feriados</br></p>
+            </div>
+        
+            <div class="cont">
+             <p>INFORMAÇÕES E RESERVAS</br>
+                Telefone: +351 123456789 / +351 987654321</br>
+                email@email.com </br>
+                Servico Best Tables </br>
+                O restaurante tem opções vegetarianas</br>
+             </p>
+            </div></br>
+
+            
+        <div id="googleMap" style="width:50%; height:380px;"></div>
+        
+            <div>
+                <p id="rua">Rua sobe e desce, 1111</p>
+            </div>
 </div>
 
-<!-- Esta parte nao percebo muito bem mas queria meter isto no site-->        
+<!-- ------------------------------------------------------------------ -->
+
+<!-- Gallery Begins -->
+
+<div id="gallery">
+<hr id="linha">
+
+    <h2>Fotos </h2>
+        
+        
+        <div class="album" style="position: relative; height: 1950;">
+            <!-- 1 row -->
+            <a href="img/img1.jpg" style="position: absolute; left: 0px; top: 0px;"></a>
+                <img class="foto" src="img/img1.jpg" alt="image1">
+            <a href="img/img2.jpg" style="position: absolute; left: 390px; top: 0px;"></a>
+                <img class="foto" src="img/img2.jpg" alt="image2">
+            <a href="img/img3.jpg" style="position: absolute; left: 780px; top: 0px;"></a>
+                <img class="foto" src="img/img3.jpg" alt="image3">
+            
+            <!-- 2 row -->
+            <a href="img/img4.jpg" style="position: absolute; left: 0px; top: 390px;"></a>
+                <img class="foto" src="img/img4.jpg" alt="image4">
+            <a href="img/img5.jpg" style="position: absolute; left: 390px; top: 390px;"></a>
+                <img class="foto" src="img/img5.jpg" alt="image5">
+            <a href="img/img6.jpg" style="position: absolute; left: 780px; top: 390px;"></a>
+                <img class="foto" src="img/img6.jpg" alt="image6">
+            
+            <!-- 3 row -->
+            <a href="img/img7.jpg" style="position: absolute; left: 0px; top: 780px;"></a>
+                <img class="foto" src="img/img7.jpg" alt="image7">
+            <a href="img/img8.jpg" style="position: absolute; left: 390px; top: 780px;"></a>
+                <img class="foto" src="img/img8.jpg" alt="image8">
+            <a href="img/img9.jpg" style="position: absolute; left: 780px; top: 780px;"></a>
+                <img class="foto" src="img/img9.jpg" alt="image9">
+            
+            <!-- 4 row -->
+            <a href="img/img10.jpg" style="position: absolute; left: 0px; top: 1170px;"></a>
+                <img class="foto" src="img/img10.jpg" alt="image10">
+            <a href="img/img11.jpg" style="position: absolute; left: 390px; top: 1170px;"></a>
+                <img class="foto" src="img/img11.jpg" alt="image11">
+            <a href="img/img12.jpg" style="position: absolute; left: 780px; top: 1170px;"></a>
+                <img class="foto" src="img/img12.jpg" alt="image12">
+            
+            <!-- 5 row -->
+            <a href="img/img13.jpg" style="position: absolute; left: 0px; top: 1590px;"></a>
+                <img class="foto" src="img/img13.jpg" alt="image13">
+            <a href="img/img14.jpg" style="position: absolute; left: 390px; top: 1590px;"></a>
+                <img class="foto" src="img/img14.jpg" alt="image14">
+            <a href="img/img15.jpg" style="position: absolute; left: 780px; top: 1590px;"></a>
+                <img class="foto" src="img/img15.jpg" alt="image15">
+            
+            <!-- Hover Icon <div class="play"><img src="_img/magnify.png"/> </div> -->
+        </div>
+    </div>
+
+<!-- ------------------------------------------------------------------ -->
+
+<!-- Footer Begins -->
+
+    <div id="footer">
+        <a href="#" class="scrollup"><img id="toparrow" src="img/arrow.png"></a>
+        <div class="network">
+            <p id="follow">Follow us</p>
+            
+            <div class="social"> <a href="https://www.facebook.com/" target="_blank">
+                <img src="img/facebook.png" alt="face" width="50px" height="50px">
+        </a></div>
+            
+            <div class="social"> <a href="https://twitter.com/" target="_blank">
+                <img src="img/twitter.png" alt="twit" width="50px" height="50px">
+        </a></div>
+            
+            <div class="social"> <a href="https://www.instagram.com/" target="_blank">
+                <img src="img/instagram.png" alt="isnta" width="50px" height="50px">
+        </a></div>
+            
+        </div>
+        
+        <p>Rua sobe e desce 1111, 4444-333 PORTO | Email@email.com | +351 123456789 / +351 987654321</p>
+        <p>2015 - 2015 - TODOS OS DIREITOS RESERVADOS - DESENVOLVIDO POR: Daniel Bessa</p>
+        </br>
+    </div>
+
+<!-- ------------------------------------------------------------------ -->
+
+<!-- Script -->        
         
 <script>
+    
 // Get the modal
 var modal = document.getElementById('myModal');
 
@@ -102,9 +288,17 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+var images = document.getElementb
 // Get all images and insert the clicked image inside the modal
 // Get the content of the image description and insert it inside the modal image caption
-var images = document.getElementsByTagName('img');
+var images = document.getElementsByClassName('foto');
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
 var i;
@@ -117,22 +311,8 @@ for (i = 0; i < images.length; i++) {
    }
 }
 </script>
-
-    <div id="footer">
-        <div class="network">
-            <p id="follow">Follow us</p>
-            <div class="social"> <a href="https://www.facebook.com/" target="_blank"><img src="_img/facebook.png" alt="face" width="50px" height="50px">
-        </a></div>
-    <div class="social"> <a href="https://twitter.com/" target="_blank"><img src="_img/twitter.png" alt="twit" width="50px" height="50px">
-        </a></div>
-    <div class="social"> <a href="https://www.instagram.com/" target="_blank"><img src="_img/instagram.png" alt="isnta" width="50px" height="50px">
-        </a></div>
-        </div>
-        <p>Rua sobe e desce 1111, 4444-333 PORTO | Email@email.com | +351 123456789 / +351 987654321</p>
-
-        <p>2015 - 2015 - TODOS OS DIREITOS RESERVADOS - DESENVOLVIDO POR: Daniel Bessa</p>
-        </br>
-    </div>
+        
+<!-- ------------------------------------------------------------------ -->
 
     </body>
 </html>

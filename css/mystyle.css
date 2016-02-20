@@ -1,95 +1,19 @@
 body {
     margin: 0px;
     padding: 0px;
-    background-color: #F5DEB3;
-}
-
-#main {
     background-color: #faf0e6;
 }
 
-
-#title{
+h1{
     text-align: center;
     font-size: 100px;
     margin-top: 400px;
 }
 
-#contacto {
-    text-align: left;
-    font-size: 50px;
-    margin-left: 100px;
-    margin-top: 150px;
-}
-
-#dia {
-    text-align: left;
-    font-size: 35px;
-    margin-left: -300px;
-    margin-top: 0px;
-}
-
-/* ---------------------------------------------------- */
-
-/* This is for the Nav Bar */
-
-#wrapper {
-    width: 100%;
-}
-
-
-.topimg {
-    position: absolute;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-    z-index: -1;
-}
-
-
-.navbar ul {
-    padding-left: 35%;
-    list-style-type: none;
-    margin: 0px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    overflow: hidden;
-    background-color: black;
-    opacity: 0.7;
-}
-
-.navbar li {
-    display:inline;
-    list-style-type: none;
-}
-
-.navbar li a {
-    color: white;
+h2{
     text-align: center;
-    padding: 60px 40px;
-    text-decoration: none;
-}
-
-
-.navbar li a:hover:not(.active) {
-    color: #27BACA;
-    background-color: #373737;
-}
-
-.active {
-    background-color: #373737;
-}
-
-/* ---------------------------------------------------- */
-
-/* Nav bar ends here */
-
-.about{
-    text-align: justify;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-    font-size: 30px;
+    font-size: 100px;
+    margin-top: 100px;
 }
 
 #linha{
@@ -100,40 +24,62 @@ body {
     width: 1300px
 }
 
-#line {
-    border: 0;
-    height: 0;
-    box-shadow: 0 0 10px 1px black;
-    margin-right: 300px;
+/* ---------------------------------------------------- */
+
+/* Top Div starts here */
+
+.topimg {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    z-index: -1;
 }
 
-#line:after {
-    content: "\00a0";
+
+.topbar ul {
+    padding-left: 35%;
+    list-style-type: none;
+    margin: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    background-color: black;
+    opacity: 0.7;
 }
 
-.info {
-    font-size: 20px;
+.topbar li {
+    display:inline;
+    list-style-type: none;
+}
+
+.topbar li a {
+    color: white;
     text-align: center;
-    display: flex;
-    padding: 0;
-    float: left;
-    margin-left: 400px;
-    margin-right: 0px;
-    margin-bottom: 100px;
-    line-height: 180%;
+    padding: 60px 40px;
+    text-decoration: none;
 }
 
-.cont {
-    font-size: 20px;
-    text-align: center;
-    display: flex;
-    padding: 0;
-    float: left;
-    margin-left: 400px;
-    margin-top: 100px;
-    margin-right: 0px;
-    margin-bottom: 100px;
-    line-height: 180%;
+
+.topbar li a:hover:not(.active) {
+    color: #27BACA;
+    background-color: #373737;
+}
+
+.active {
+    background-color: #373737;
+}
+
+/* ---------------------------------------------------- */
+
+/* Main Div Starts here */
+
+.intro{
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1000px;
+    font-size: 30px;
 }
 
 .section {
@@ -152,45 +98,11 @@ body {
     padding: 20px;
 }
 
-
-/* ---------------------------------------------------- */
-
-/* ----------------------Menu---------------------- */
-
-#back {
-    background-image: url("../_img/menu_bg.jpg");
-    background-size: 2000px 1050px;
-    background-repeat: no-repeat;
-    background-position: bottom;
-}
-
-#bg {
-    
-}
-
-#bg img {
-    display: block;
-    margin-top: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 100px;
-}
-
-/* ---------------------------------------------------- */
-
-/* This is for the Photo Gallery */
-
-.galleria {
-    margin-left: 360px;
-    margin-right: 200px;
-    margin-bottom: 100px;
-}
-.galleria {
-}
-
-.galleria img:hover {
-    opacity: 0.7;
-    cursor: pointer;
+.galeria img {
+    box-shadow: 14px 14px 16px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-left: 20px;
+    margin-bottom: 20px;
+    width: 250px;
 }
 
 #img6 {
@@ -201,42 +113,146 @@ body {
     margin-left: 200px;
 }
 
-.galleria2 img {
-    box-shadow: 14px 14px 16px 1px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    margin-left: 20px;
-    margin-bottom: 20px;
-    width: 250px;
-}
-
-.galleria2 img:Hover {
+.galeria img:Hover {
     cursor: pointer;
     opacity: 0.7;
 }
 
+.info {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    float: left;
+    margin-left: 400px;
+    margin-right: 0px;
+    margin-bottom: 100px;
+    line-height: 180%;
 }
 
-/*  Acontecimentos para ou altura
-.galleria :hover .play {
+/* ---------------------------------------------------- */
+
+/* Menu Div Starts here */
+
+#bground {
+    background-image: url("../_img/menu_bg.jpg");
+    background-size: 2000px 1050px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+}
+
+#imgground {
+
+}
+
+#imgground img {
     display: block;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
 }
 
-.play{
-    position : absolute;
-    display:none;
-    margin:0 auto; left:0px;
-    right:0px;
-    z-index:100
+/* ---------------------------------------------------- */
+
+/* Contacto Div starts here */
+
+.cont {
+    font-size: 20px;
+    text-align: center;
+    display: flex;
+    padding: 0;
+    float: left;
+    margin-left: 400px;
+    margin-top: 100px;
+    margin-right: 0px;
+    margin-bottom: 100px;
+    line-height: 180%;
 }
 
-*/
+#googleMap {
+    margin-left: 520px;
+}
 
-/* The Image Box */
+#rua {
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 150px;
+    font-size: 30px; 
+}
 
-.img img {
-    width: 100%;
-    height: auto;
+/* ---------------------------------------------------- */
+
+/* Gallery Div starts here */
+
+.album {
+    margin-left: 360px;
+    margin-right: 200px;
+    margin-bottom: 100px;
+}
+
+.album img:hover {
+    opacity: 0.7;
     cursor: pointer;
 }
+
+/* ---------------------------------------------------- */
+
+/* This is for the footer */
+
+#footer {
+    color: #F5DEB3;
+    text-align: center;
+    background-color: #232730;
+    color:white;
+    clear:both;
+    padding:5px;
+    margin-bottom: 0px;
+}
+
+/* ---------------------------------------------------- */
+
+/* Social time!!!!!! */
+
+.network {
+    margin-right: 130px;
+    font-weight:bold;
+}
+
+#follow {
+    text-align: right;
+    font-size: 30px;
+    margin-right: 40px;
+}
+
+.social {
+    display: inline;
+    float: right;
+}
+
+.social img {
+    padding: 10px;
+}
+
+/* ---------------------------------------------------- */
+
+/* Back to the top Button */
+
+.scrollup {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    display: none;
+ }
+
+.scrollup img {
+    width: 70px;
+    height: auto;
+    
+}
+
+/* ---------------------------------------------------- */
 
 /* Add Responsiveness */
 .responsive {
@@ -340,63 +356,4 @@ body {
     clear: both;
 }
 
-/* Gallery menu ends here */
-
 /* ---------------------------------------------------- */
-
-/* Social time!!!!!! */
-
-#follow {
-    text-align: right;
-    margin-right: 30px;
-    font-size: 30px;
-}
-
-.social {
-    display: inline;
-    float: right;
-}
-
-.social img {
-    padding: 10px;
-    margin-bottom: 20px;
-}
-
-#googleMap {
-    margin-left: 520px;
-}
-
-#rua {
-    text-align: center;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-bottom: 150px;
-    font-size: 30px; 
-}
-
-.network {
-    font-weight:bold;
-    margin-right: 60px;
-}
-
-/* ---------------------------------------------------- */
-
-/* This is for the footer */
-
-#footer {
-    color: #F5DEB3;
-    text-align: center;
-    background-color: #232730;
-    color:white;
-    clear:both;
-    padding:5px;
-    margin-bottom: 0px;
-}
-
-.foot {
-    display: inline;
-    margin-top: 10px;
-}
-
-
-/* Footer ends here */
